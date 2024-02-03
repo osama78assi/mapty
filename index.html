@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="images/icon.png">
+  <link rel="stylesheet" href="css/master.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+  <!-- Leaflet Labriary -->
+  <link rel="stylesheet" href="js/leaflet/dist/leaflet.css">
+  <script defer src="js/leaflet/dist/leaflet.js"></script>
+  <title>Mapty</title>
+</head>
+<body>
+  <div class="card">
+    <div class="container">
+      <div class="dashboard">
+        <div class="top-part">
+          <div class="logo">
+            <img src="images/logo.png" alt="">
+          </div>
+          <!-- Form -->
+          <form class="form-workout hide form-hidden">
+            <div class="input-group">
+              <label for="type">Type</label>
+              <select name="type" id="type" class="input">
+                <option value="running">running</option>
+                <option value="cycling">cycling</option>
+              </select>
+            </div>
+            <div class="input-group">
+              <label for="distance">Distance</label>
+              <input id="distance" class="input" name="distance" type="text" placeholder="km">
+            </div>
+            <div class="input-group">
+              <label for="duration">Duration</label>
+              <input id="duration" class="input" name="duration" type="text" placeholder="min">
+            </div>
+            <div class="input-group">
+              <label for="cadence">Cadence</label>
+              <input id="cadence" class="input" name="cadence" type="text" placeholder="step/min">
+            </div>
+            <div class="input-group hide">
+              <label for="elevation">Elev Gain</label>
+              <input id="elevation" class="input" name="elevation" type="text" placeholder="meters">
+            </div>
+          </form>
+          <!-- Form -->
+          <ul class="workouts">
+          </ul>
+        </div>
+        <p class="copyright">© Copyright by <a target="_blank" href="https://twitter.com/jonasschmedtman">Jonas Schmedtmann</a>. Use for learning or your portfolio.
+          Don't use to teach. Don't claim as your own.
+        </p>
+      </div>
+      <div class="map" id="map"></div>
+    </div>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+</html>

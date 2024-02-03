@@ -1,0 +1,245 @@
+:root {
+  --color-brand--1: #ffb545;
+  --color-brand--2: #00c46a;
+
+  --color-dark--1: #2d3439;
+  --color-dark--2: #42484d;
+  --color-light--1: #aaa;
+  --color-light--2: #ececec;
+  --color-light--3: rgb(214, 222, 224);
+}
+* {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+a {
+  color: #fff !important;
+}
+.container {
+  padding: 0rem 1rem;
+  margin: 0rem auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 730px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* Error */
+.error,
+.form-error {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1rem;
+  text-align: center;
+  color: var(--color-light--1);
+  background-color: var(--color-light--2);
+}
+.not-visibile {
+  visibility: hidden;
+  opacity: 0;
+}
+.form-error {
+  border-radius: 0.5rem;
+  color: var(--color-dark--1) !important;
+  transition: 0.5s linear;
+  transition-property: visibility, opacity;
+}
+/* Dashboard */
+.card {
+  height: 100vh;
+}
+.card .container {
+  display: flex;
+  padding: 1rem;
+}
+.dashboard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.5rem;
+  flex-basis: 41.66667%;
+  background-color: var(--color-dark--1);
+  color: #fff;
+}
+.logo {
+  text-align: center;
+  padding: 1rem 0rem;
+}
+.logo img {
+  width: 30%;
+  height: 50%;
+}
+/* From */
+.hide {
+  display: none !important;
+}
+.form-hidden {
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+}
+.form-workout {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  grid-template-rows: repeat(2, 2fr);
+  gap: 1rem;
+  margin: 1rem 0rem;
+  transition: 0.5s linar;
+  transition-property: opacity, visibility, height;
+}
+.form-workout .input-group {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 0rem 0.3rem;
+}
+.form-workout label {
+  width: fit-content;
+}
+.form-workout input,
+.form-workout select {
+  width: 90px;
+  padding: 0.2rem;
+  border-radius: 0.2rem;
+  border: none;
+  background-color: var(--color-light--1);
+  transition: 0.2s linear background-color;
+}
+.form-workout input:focus,
+.form-workout select:focus {
+  outline: none;
+  background-color: var(--color-light--2);
+}
+.form-workout option {
+  background-color: var(--color-dark--2);
+  color: #fff;
+  border-radius: 0.3rem;
+}
+.form-workout #type {
+  position: relative;
+  color: black !important;
+  cursor: pointer;
+}
+/* Labels */
+.workouts {
+  height: 450px;
+  padding: 0;
+  list-style-type: none;
+  padding: 0.5rem;
+  overflow-y: auto;
+}
+.workout {
+  position: relative;
+  background-color: var(--color-dark--2);
+  padding: 1rem;
+  border-radius: 0.3rem;
+  border-left: 0.3rem solid transparent;
+}
+.workout .x {
+  display: inline-block;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: var(--color-light--1);
+  cursor: pointer;
+}
+.workouts .workout:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.workouts .type-cycling {
+  border-left-color: var(--color-brand--1) !important;
+}
+.workouts .type-running {
+  border-left-color: var(--color-brand--2) !important;
+}
+.workout-date {
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+.content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+}
+.content-details {
+  font-weight: 300;
+}
+.unit {
+  font-weight: 200;
+  font-size: 0.7rem;
+}
+.copyright {
+  padding: 1rem;
+  font-weight: 300;
+  text-align: center;
+  color: var(--color-light--1) !important;
+}
+a {
+  color: var(--color-light--1) !important;
+  transition: 0.2s linear color;
+}
+a:hover {
+  color: var(--color-light--2) !important;
+}
+.map {
+  position: relative;
+  flex-basis: 58.33333%;
+  background-color: var(--color-light--1);
+}
+.leaflet-popup-content-wrapper { /* Overriding */
+  background-color: var(--color-dark--1) !important;
+  color: #fff !important;
+  border-radius: 0.3rem !important;
+}
+.type-cycling .leaflet-popup-content-wrapper {
+  border-left: 0.3rem solid var(--color-brand--1) !important;
+}
+.type-running .leaflet-popup-content-wrapper {
+  border-left: 0.3rem solid var(--color-brand--2) !important;
+}
+.leaflet-popup-tip {
+  background-color: var(--color-dark--1) !important;
+}
+@media (max-width: 500px) {
+  .form-workout {
+    grid-template-columns: repeat(1, 2fr);
+    grid-template-rows: repeat(4, 2fr);
+  }
+}
+@media (max-width: 992px) {
+  .card .container {
+    flex-direction: column-reverse;
+    display: flex;
+    padding: 1rem;
+    height: calc(100% - 2rem);
+  }
+  .logo img {
+    width: 20%;
+  }
+  .workouts {
+    height: 150px;
+  }
+}
+@media (max-width: 500px) {
+  .logo img {
+    width: 30%;
+  }
+  .workouts {
+    height: 125px;
+  }
+}
